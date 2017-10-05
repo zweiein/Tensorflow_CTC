@@ -6,6 +6,9 @@ from __future__ import print_function
 import time
 
 import tensorflow as tf
+sess = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True),
+                  inter_op_parallelism_threads = 1, intra_op_parallelism_threads = 1))
+
 import scipy.io.wavfile as wav
 import numpy as np
 
