@@ -5,6 +5,8 @@ from __future__ import print_function
 
 import time
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # or any {'0', '1', '2'}
 import tensorflow as tf
 sess = tf.Session(config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True),
                   inter_op_parallelism_threads = 1, intra_op_parallelism_threads = 1))
